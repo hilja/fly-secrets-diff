@@ -1,16 +1,18 @@
 {
   "name": "s-diff",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "description": "CLI tool to diff fly.io machine secrets and local secrets",
+  "keywords": [
+    "diff",
+    "fly.io"
+  ],
   "license": "ISC",
   "author": "hilja",
   "repository": {
     "url": "git+https://github.com/hilja/s-diff.git"
   },
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
+    "index.mjs"
   ],
   "type": "module",
   "sideEffects": false,
