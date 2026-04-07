@@ -336,9 +336,9 @@ async function run(args) {
   await printDiff(args)
 }
 
-const asScript = process.argv[1] === import.meta.filename
+const runAsScript = process.argv[1] === import.meta.filename
 
 /**
  * Execute the cli
  */
-if (asScript) await run(args())
+if (runAsScript) await run(args())
