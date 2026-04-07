@@ -25,11 +25,10 @@
     ".": "./index.mjs"
   },
   "scripts": {
-    "build": "tsdown",
     "format": "oxfmt --write",
     "lint": "oxlint --type-check",
     "ncu": "pnpmx npm-check-updates --format=group,repo -i -p pnpm",
-    "pub": "pnpm build && (npm whoami || npm login) && pnpm publish --access=public --tag=latest",
+    "pub": "(npm whoami || npm login) && pnpm publish --access=public --tag=latest",
     "test": "vitest"
   },
   "devDependencies": {
