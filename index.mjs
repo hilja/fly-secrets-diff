@@ -288,7 +288,7 @@ export async function printDiff(args) {
 
   if (missingArr.length > 0) {
     log.info(
-      `\n 🟢 Add missing:
+      `\n Add missing secrets to machines:\n
  fly secrets set --app=${args.app} \\
    ${missing}`
     )
@@ -296,11 +296,16 @@ export async function printDiff(args) {
 
   if (unusedArr.length > 0) {
     log.info(
-      `\n 🔴 Remove unused:
+      `\n Remove unused secrets from machines:\n
  fly secrets unset --app=${args.app} \\
    ${unusedStr}`
     )
+
+    if (!args.reveal) {
+      console.log('\nTip: run with --reveal to show the secrets')
+    }
   }
+  log.info()
 }
 
 /**
